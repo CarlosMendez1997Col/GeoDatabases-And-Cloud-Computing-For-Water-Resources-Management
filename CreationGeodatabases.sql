@@ -12,3 +12,23 @@ CREATE DATABASE master_gdb
     CONNECTION LIMIT = -1
     IS_TEMPLATE = False;
 
+--- Create an user with permissions
+
+CREATE ROLE support WITH
+	LOGIN
+	SUPERUSER
+	CREATEDB
+	CREATEROLE
+	INHERIT
+	NOREPLICATION
+	BYPASSRLS
+	CONNECTION LIMIT -1
+	PASSWORD 'xxxxxx';
+COMMENT ON ROLE support IS 'support data';
+
+--- Change the administrator and owner of DATABASE
+
+ALTER DATABASE master_gdb OWNER TO support;
+
+
+
