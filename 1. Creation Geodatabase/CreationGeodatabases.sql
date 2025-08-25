@@ -1,6 +1,7 @@
 --- Water Resources Management using PostgreSQL and PgAdmin4
---- create by MSc Carlos Mendez
+--- Developed by MSc Carlos Mendez
 
+--- Create DATABASE
 CREATE DATABASE master_gdb
     WITH
     OWNER = postgres
@@ -12,8 +13,10 @@ CREATE DATABASE master_gdb
     CONNECTION LIMIT = -1
     IS_TEMPLATE = False;
 
---- Create an user with permissions
+--- Delete DATABASE
+drop DATABASE master_gdb;	
 
+--- Create an user with permissions
 CREATE ROLE support WITH
 	LOGIN
 	SUPERUSER
@@ -26,14 +29,23 @@ CREATE ROLE support WITH
 	PASSWORD 'xxxxxx';
 COMMENT ON ROLE support IS 'support data';
 
---- Change the administrator and owner of DATABASE
+--- delete user with permissions 
+drop ROLE SUPPORT;
 
+--- Change the administrator and owner of DATABASE
 ALTER DATABASE master_gdb OWNER TO support;
 
+--- Create a table with fields
+CREATE TABLE water_categories(Hybas_ID int, water_description varchar(30));
 
+--- Modify users and fields
+ALTER TABLE IF EXISTS public.water_categories
+    ALTER COLUMN hybas_id SET NOT NULL;
+ALTER TABLE IF EXISTS public.water_categories
+    ALTER COLUMN water_description SET NOT NULL;
+ALTER TABLE IF EXISTS public.water_categories
+    ADD PRIMARY KEY (hybas_id);
 
-
-
-
-
+--- Delete table with fields
+DROP TABLE water_categories;
 
