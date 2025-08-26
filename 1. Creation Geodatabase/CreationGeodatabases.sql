@@ -49,3 +49,19 @@ ALTER TABLE IF EXISTS public.water_categories
 --- Delete table with fields
 DROP TABLE water_categories;
 
+SELECT * FROM public.water_categories
+ORDER BY hybas_id ASC;
+
+--- Insert data and rows into water_categories
+INSERT INTO water_categories(hybas_id,water_description) VALUES(123456,'Main Basin');
+INSERT INTO water_categories(hybas_id,water_description) VALUES(7890,'Basin2');
+
+--- Update data
+UPDATE water_categories SET water_description = 'Basin' WHERE hybas_id = 123456;
+
+--- Delete ROWS
+DELETE FROM water_categories WHERE hybas_id = 123456;
+DELETE FROM water_categories WHERE hybas_id = 7890;
+
+
+
