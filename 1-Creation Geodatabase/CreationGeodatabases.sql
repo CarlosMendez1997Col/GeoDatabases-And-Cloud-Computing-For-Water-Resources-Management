@@ -62,7 +62,30 @@ COMMENT ON ROLE support IS 'support data';
 --- Change the administrator and set 'Support'
 ALTER DATABASE master_gdb OWNER TO support;
 
+--- create the extension PostGIS 
+create EXTENSION postgis;
 
+
+/* 
+Connect GIS data using PostGIS and import shapefiles (.shp) using the function shp2pgsql
+
+Try to run the following script in the Terminal of Windows/macOS/Linux:
+
+First, Open the shp2pgsql.exe in the local directory 
+C:\Program Files\PostgreSQL\17\bin\shp2pgsql.exe
+
+Second, run the script and replace the path folder and .shp files, folowing the structure 
+(shp2pgsql -s <SRID> -I <path_to_shapefile.shp> <schema_name>.<table_name> > <output_file.sql>
+
+EXAMPLE WITH HydroWASTE.shp
+
+shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabases_Water\HydroWASTE_SA.shp water_data.Hydrowaste > C:\Users\USUARIO\Desktop\Geodatabases_Water\Hydrowaste.sql
+*/
+
+
+
+SELECT * FROM public.water_categories
+ORDER BY hybas_id ASC;
 
 
 
@@ -80,8 +103,6 @@ ALTER TABLE IF EXISTS public.water_categories
 --- Delete table with fields
 DROP TABLE water_categories;
 
-SELECT * FROM public.water_categories
-ORDER BY hybas_id ASC;
 
 --- Insert data and rows into water_categories
 INSERT INTO water_categories(hybas_id,water_description) VALUES(123456,'Main Basin');
@@ -94,7 +115,6 @@ UPDATE water_categories SET water_description = 'Basin' WHERE hybas_id = 123456;
 DELETE FROM water_categories WHERE hybas_id = 123456;
 DELETE FROM water_categories WHERE hybas_id = 7890;
 
-create EXTENSION postgis;
 
 CREATE SCHEMA water_data
     AUTHORIZATION postgres;
