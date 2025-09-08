@@ -6,13 +6,13 @@
 */
 
 ////////////////////////////////////////////////////////////////////////////// 1. SACB /////////////////////////////////////////////////////////////////////
-// South America Countries and Boundary
+// South America Countries and Boundary (SACB)
 
 // Use a simple query by attributes and fields
 var SA_countries = ee.FeatureCollection('USDOS/LSIB_SIMPLE/2017')
                      .filter(ee.Filter.eq('wld_rgn', 'South America'))
 
-// Delete three rows (not belongs to SA)
+// Delete three rows with info (not belongs to SA)
 var SA_countries_ = SA_countries.select('country_na')
                                 .filter(ee.Filter.inList('country_na', ['Invernada Area', 'Isla Brasilera', 'Falkland Islands']).not());
 
@@ -29,6 +29,16 @@ var AOI = ee.FeatureCollection("projects/ee-carlosmendez1997/assets/SA_Countries
 // Next Steps
 // Clip the rasters in AOI
 // Export the rasters to Google Drive.
+
+////////////////////////////////////////////////////////////////////////////// 2. FLAU /////////////////////////////////////////////////////////////////////
+//First Level Administrative Units South America (FLAU_SA) 
+var Flau_SA = ee.FeatureCollection("FAO/GAUL_SIMPLIFIED_500m/2015/level1").select('ADM1_NAME').filterBounds(AOI);
+Export.table.toDrive({collection: Flau_SA, description: "FLAU_SA", fileFormat: 'GeoJSON', folder: 'Geodatabase'});
+
+////////////////////////////////////////////////////////////////////////////// 12. SLAU /////////////////////////////////////////////////////////////////////
+//Second Level Administrative Units South America (SLAU_SA)
+var Slau_SA = ee.FeatureCollection("FAO/GAUL_SIMPLIFIED_500m/2015/level2").select('ADM2_NAME').filterBounds(AOI);
+Export.table.toDrive({collection: Slau_SA, description: "SLAU_SA", fileFormat: 'GeoJSON', folder: 'Geodatabase'});
 
 ////////////////////////////////////////////////////////////////////////////// 2. HydroSHEDS (Raster) /////////////////////////////////////////////////////////////////////
 
@@ -110,12 +120,3 @@ Export.table.toDrive({collection: Laketemp, description: "LakeTEMP_SA", fileForm
 var GPPD_SA = ee.FeatureCollection('WRI/GPPD/power_plants').filterBounds(AOI);
 Export.table.toDrive({collection: GPPD_SA, description: "GPPD_SA", fileFormat: 'SHP', folder: 'Geodatabase'});
 
-////////////////////////////////////////////////////////////////////////////// 11. FLAU /////////////////////////////////////////////////////////////////////
-//First Level Administrative Units
-var Flau_SA = ee.FeatureCollection("FAO/GAUL_SIMPLIFIED_500m/2015/level1").select('ADM1_NAME').filterBounds(AOI);
-Export.table.toDrive({collection: Flau_SA, description: "FLAU_SA", fileFormat: 'GeoJSON', folder: 'Geodatabase'});
-
-////////////////////////////////////////////////////////////////////////////// 12. SLAU /////////////////////////////////////////////////////////////////////
-//Second Level Administrative Units
-var Slau_SA = ee.FeatureCollection("FAO/GAUL_SIMPLIFIED_500m/2015/level2").select('ADM2_NAME').filterBounds(AOI);
-Export.table.toDrive({collection: Slau_SA, description: "SLAU_SA", fileFormat: 'GeoJSON', folder: 'Geodatabase'});
