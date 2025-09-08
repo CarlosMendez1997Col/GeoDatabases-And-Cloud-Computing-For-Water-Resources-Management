@@ -6,7 +6,6 @@
 */
 
 ////////////////////////////////////////////////////////////////////////////// 1. SACB /////////////////////////////////////////////////////////////////////
-
 // South America Countries and Boundary
 
 // Use a simple query by attributes and fields
@@ -21,7 +20,7 @@ var SA_countries_ = SA_countries.select('country_na')
 var Sa_countries_name = SA_countries_.select(['country_na'],['Name'])
 
 //Map.addLayer(SA_countries_)
-Export.table.toDrive({collection: Sa_countries_name, description: 'SA_countries', fileFormat: 'SHP', folder: 'Geodatabase'});
+Export.table.toDrive({collection: Sa_countries_name, description: 'SACB_SA', fileFormat: 'SHP', folder: 'Geodatabase'});
 
 ////////////////////////////////////////////////////////////////////////////// Are of Interest (AOI) /////////////////////////////////////////////////////////////////////
 //https://code.earthengine.google.com/?asset=projects/ee-carlosmendez1997/assets/SA_Countries
