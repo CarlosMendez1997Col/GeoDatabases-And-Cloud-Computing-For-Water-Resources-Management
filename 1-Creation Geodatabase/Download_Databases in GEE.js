@@ -2,7 +2,22 @@
                               					  												Water Resources Managemen using PostgreSQL and PgAdmin4
                                         																				Area of Interest (South America)
                                       															 					   Developed by MSc Carlos Mendez
-																														 
+
+MOST TABLES AND DATASETS USED:
+
+1. South America Countries and Boundary 
+2. Firt Level Administrative Units (FLAU)
+3. Second Level Administrative Units (SLAU)
+4. HydroSHEDS (Conditioned DEM)
+5. HydroBASINS (Level 1,2,3,4,5,6,7,8,9,10,11 and 12)
+6. HydroRIVERS
+7. HydroLAKES
+8. Global Lakes and Wetlands Database (GLWD)
+9. HydroWASTE
+10. Global River Classification (GloRiC)
+11. Lake TEMP
+12. Global Power Plant Database (GPPD)
+
 */
 ////////////////////////////////////////////////////////////////////////////// 1. SACB /////////////////////////////////////////////////////////////////////
 // South America Countries and Boundary (SACB)
