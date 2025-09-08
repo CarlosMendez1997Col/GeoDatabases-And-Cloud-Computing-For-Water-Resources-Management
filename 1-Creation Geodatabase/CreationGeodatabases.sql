@@ -6,7 +6,7 @@
 MOST TABLES AND DATASETS USED:
 
 1. South America Countries and Boundary 
-2. HydroSHEDS (Conditioned DEM, Flow Accumulation, Flow Drainage Direction and Void DEM)
+2. HydroSHEDS (Conditioned DEM)
 3. HydroBASINS (Level 1,2,3,4,5,6,7,8,9,10,11 and 12)
 4. HydroRIVERS
 5. HydroLAKES
@@ -17,17 +17,6 @@ MOST TABLES AND DATASETS USED:
 10. Global Power Plant Database (GPPD)
 11. Firt Level Administrative Units (FLAU)
 12. Second Level Administrative Units (SLAU)
-
-HydroSHEDS
-https://www.hydrosheds.org/
-
-
-World Resources Institute
-https://www.wri.org/
-
-
-Global Administrative Unit Layers (GAUL) 
-
 
 */
 
