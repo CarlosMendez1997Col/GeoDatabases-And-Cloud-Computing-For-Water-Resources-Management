@@ -1,32 +1,33 @@
 /*
-											Water Resources Managemen using PostgreSQL and PgAdmin4
-															Area of Interest (South America)
-															 Developed by MSc Carlos Mendez
+																	Water Resources Management using PostgreSQL and PgAdmin4
+																				Area of Interest (South America)
+															 					 Developed by MSc Carlos Mendez
 																														 
 MOST TABLES AND DATASETS USED:
+
+1. South America Countries and Boundary 
+2. HydroSHEDS (Conditioned DEM, Flow Accumulation, Flow Drainage Direction and Void DEM)
+3. HydroBASINS (Level 1,2,3,4,5,6,7,8,9,10,11 and 12)
+4. HydroRIVERS
+5. HydroLAKES
+6. Global Lakes and Wetlands Database (GLWD)
+7. HydroWASTE
+8. Global River Classification (GloRiC)
+9. Lake TEMP
+10. Global Power Plant Database (GPPD)
+11. Firt Level Administrative Units (FLAU)
+12. Second Level Administrative Units (SLAU)
 
 HydroSHEDS
 https://www.hydrosheds.org/
 
-1. HydroSHEDS
-2. HydroBASINS
-3. HydroRIVERS
-4. HydroLAKES
-5. Global Lakes and Wetlands Database (GLWD)
-6. HydroWASTE
-7. Global River Classification (GloRiC)
-8. Lake TEMP
 
 World Resources Institute
 https://www.wri.org/
 
-9. Global Power Plant Database
 
 Global Administrative Unit Layers (GAUL) 
 
-10. Global Country boundaries
-11. Firt Level Administrative Units
-12. Second Level Administrative Units
 
 */
 
@@ -69,7 +70,7 @@ create EXTENSION postgis;
 /* 
 Connect GIS data using PostGIS and import shapefiles (.shp) using the function shp2pgsql
 
-Try to run the following script in the Terminal of Windows/macOS/Linux:
+Try to run the following scripts in the Terminal of Windows/macOS/Linux:
 
 First, Open the shp2pgsql.exe in the local directory 
 C:\Program Files\PostgreSQL\17\bin\shp2pgsql.exe
@@ -77,9 +78,50 @@ C:\Program Files\PostgreSQL\17\bin\shp2pgsql.exe
 Second, run the script and replace the path folder and .shp files, folowing the structure 
 (shp2pgsql -s <SRID> -I <path_to_shapefile.shp> <schema_name>.<table_name> > <output_file.sql>
 
-EXAMPLE WITH HydroWASTE.shp
 
-shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabases_Water\HydroWASTE_SA.shp water_data.Hydrowaste > C:\Users\USUARIO\Desktop\Geodatabases_Water\Hydrowaste.sql
+																				HydroSHEDS_SA.shp
+
+
+																				HydroBASINS_SA.shp
+
+
+																				HydroRIVERS_SA.shp
+
+
+																				HydroLAKES_SA.shp
+
+
+																				GLWD_SA.shp
+
+
+																				HydroWASTE_SA.shp
+
+
+																				GloRiC_SA.shp
+
+
+																				LakeTEMP_SA.shp
+
+
+
+Example with HydroWASTE_SA.shp
+shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabases_Water\HydroWASTE_SA.shp water_data.Hydrowaste > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\Hydrowaste.sql
+
+Example with GloRiC.shp
+
+
+Example with GloRiC.shp
+
+
+Example with GloRiC.shp
+
+
+Example with GloRiC.shp
+
+
+EXAMPLE WITH LakeTEMP.shp
+shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabases_Water\LakeTEMP_SA.shp water_data.LakeTEMP > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\LakeTEMP.sql
+
 */
 
 
