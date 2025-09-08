@@ -24,6 +24,7 @@ var Sa_countries_name = SA_countries_.select(['country_na'],['Name'])
 Export.table.toDrive({collection: Sa_countries_name, description: 'SA_countries', fileFormat: 'SHP', folder: 'Geodatabase'});
 
 ////////////////////////////////////////////////////////////////////////////// Are of Interest (AOI) /////////////////////////////////////////////////////////////////////
+//https://code.earthengine.google.com/?asset=projects/ee-carlosmendez1997/assets/SA_Countries
 var AOI = ee.FeatureCollection("projects/ee-carlosmendez1997/assets/SA_Countries").geometry();
 
 // Next Steps
@@ -71,7 +72,6 @@ for (var i = 1; i < 13; i++)
   Export.table.toDrive({collection: basin_level, description: "HydroBASINS_lv"+ [i]+"_SA", fileFormat: 'SHP', folder: 'Geodatabase'});
 }
 
-
 ////////////////////////////////////////////////////////////////////////////// 4. HydroRIVERS /////////////////////////////////////////////////////////////////////
 // File downloaded from: https://www.hydrosheds.org/products/hydrorivers
 //https://code.earthengine.google.com/?asset=projects/ee-carlosmendez1997/assets/SA_HydroRIVERS
@@ -86,7 +86,7 @@ Export.table.toDrive({collection: Hydrolakes, description: "HydroLAKES_SA", file
 
 ////////////////////////////////////////////////////////////////////////////// 6. GLWD /////////////////////////////////////////////////////////////////////
 // The Global Lakes and Wetlands Database (GLWD) exceed the maximum lenght file in GEE
-//Download directly the file in: https://www.hydrosheds.org/products/glwd
+// Download directly the file in: https://www.hydrosheds.org/products/glwd
 
 ////////////////////////////////////////////////////////////////////////////// 7. HydroWASTE /////////////////////////////////////////////////////////////////////
 // File downloaded from: https://www.hydrosheds.org/products/hydrowaste
@@ -113,10 +113,10 @@ Export.table.toDrive({collection: GPPD_SA, description: "GPPD_SA", fileFormat: '
 
 ////////////////////////////////////////////////////////////////////////////// 11. FLAU /////////////////////////////////////////////////////////////////////
 //First Level Administrative Units
-var Flau_SA = ee.FeatureCollection("FAO/GAUL_SIMPLIFIED_500m/2015/level1").filterBounds(AOI);
-Export.table.toDrive({collection: Flau_SA, description: "Flau_SA", fileFormat: 'SHP', folder: 'Geodatabase'});
+var Flau_SA = ee.FeatureCollection("FAO/GAUL_SIMPLIFIED_500m/2015/level1").select('ADM1_NAME').filterBounds(AOI);
+Export.table.toDrive({collection: Flau_SA, description: "Flau_SA", fileFormat: 'GeoJSON', folder: 'Geodatabase'});
 
 ////////////////////////////////////////////////////////////////////////////// 12. SLAU /////////////////////////////////////////////////////////////////////
 //Second Level Administrative Units
-var Slau_SA = ee.FeatureCollection("FAO/GAUL_SIMPLIFIED_500m/2015/level2").filterBounds(AOI);
-Export.table.toDrive({collection: Slau_SA, description: "Slau_SA", fileFormat: 'SHP', folder: 'Geodatabase'});
+var Slau_SA = ee.FeatureCollection("FAO/GAUL_SIMPLIFIED_500m/2015/level2").select('ADM2_NAME').filterBounds(AOI);
+Export.table.toDrive({collection: Slau_SA, description: "Slau_SA", fileFormat: 'GeoJSON', folder: 'Geodatabase'});
