@@ -34,26 +34,26 @@ var AOI = ee.FeatureCollection("projects/ee-carlosmendez1997/assets/SA_Countries
 
 //Conditioned DEM 15 Arc seconds
 var Hydrosheds_CondDem15Arc = ee.Image("WWF/HydroSHEDS/15CONDEM").clip(AOI);
-Export.image.toDrive({image: Hydrosheds_CondDem15Arc, description: "Hydrosheds_CondDem15Arc_SA", fileFormat: 'GeoTIFF', folder: 'Geodatabase'});
+Export.image.toDrive({image: Hydrosheds_CondDem15Arc, description: "HydroSHEDS_CondDem15Arc_SA", fileFormat: 'GeoTIFF', folder: 'Geodatabase'});
 //Conditioned DEM 30 Arc seconds
 var Hydrosheds_CondDem30Arc = ee.Image("WWF/HydroSHEDS/30CONDEM").clip(AOI);
-Export.image.toDrive({image: Hydrosheds_CondDem30Arc, description: "Hydrosheds_CondDem30Arc_SA", fileFormat: 'GeoTIFF', folder: 'Geodatabase'});
+Export.image.toDrive({image: Hydrosheds_CondDem30Arc, description: "HydroSHEDS_CondDem30Arc_SA", fileFormat: 'GeoTIFF', folder: 'Geodatabase'});
 
 
 //Flow Accumulation 15 Arc seconds
 var Hydrosheds_FloAccu15Arc = ee.Image("WWF/HydroSHEDS/15ACC").clip(AOI);
-Export.image.toDrive({image: Hydrosheds_FloAccu15Arc, description: "Hydrosheds_FloAccu15Arc_SA", fileFormat: 'GeoTIFF', folder: 'Geodatabase'});
+Export.image.toDrive({image: Hydrosheds_FloAccu15Arc, description: "HydroSHEDS_FloAccu15Arc_SA", fileFormat: 'GeoTIFF', folder: 'Geodatabase'});
 //Flow Accumulation 30 Arc seconds
 var Hydrosheds_FloAccu30Arc = ee.Image("WWF/HydroSHEDS/30ACC").clip(AOI);
-Export.image.toDrive({image: Hydrosheds_FloAccu30Arc, description: "Hydrosheds_FloAccu30Arc_SA", fileFormat: 'GeoTIFF', folder: 'Geodatabase'});
+Export.image.toDrive({image: Hydrosheds_FloAccu30Arc, description: "HydroSHEDS_FloAccu30Arc_SA", fileFormat: 'GeoTIFF', folder: 'Geodatabase'});
 
 
 //Flow Drainage Direction 3 Arc seconds
 var Hydrosheds_FloDire15Arc = ee.Image("WWF/HydroSHEDS/15DIR").clip(AOI);
-Export.image.toDrive({image: Hydrosheds_FloDire15Arc, description: "Hydrosheds_FloDire15Arc_SA", fileFormat: 'GeoTIFF', folder: 'Geodatabase'});
+Export.image.toDrive({image: Hydrosheds_FloDire15Arc, description: "HydroSHEDS_FloDire15Arc_SA", fileFormat: 'GeoTIFF', folder: 'Geodatabase'});
 //Flow Drainage Direction 3 Arc seconds
 var Hydrosheds_FloDire30Arc = ee.Image("WWF/HydroSHEDS/30DIR").clip(AOI);
-Export.image.toDrive({image: Hydrosheds_FloDire30Arc, description: "Hydrosheds_FloDire30Arc_SA", fileFormat: 'GeoTIFF', folder: 'Geodatabase'});
+Export.image.toDrive({image: Hydrosheds_FloDire30Arc, description: "HydroSHEDS_FloDire30Arc_SA", fileFormat: 'GeoTIFF', folder: 'Geodatabase'});
 
 
 //Void DEM 3 Arc seconds
@@ -113,9 +113,9 @@ Export.table.toDrive({collection: GPPD_SA, description: "GPPD_SA", fileFormat: '
 ////////////////////////////////////////////////////////////////////////////// 11. FLAU /////////////////////////////////////////////////////////////////////
 //First Level Administrative Units
 var Flau_SA = ee.FeatureCollection("FAO/GAUL_SIMPLIFIED_500m/2015/level1").select('ADM1_NAME').filterBounds(AOI);
-Export.table.toDrive({collection: Flau_SA, description: "Flau_SA", fileFormat: 'GeoJSON', folder: 'Geodatabase'});
+Export.table.toDrive({collection: Flau_SA, description: "FLAU_SA", fileFormat: 'GeoJSON', folder: 'Geodatabase'});
 
 ////////////////////////////////////////////////////////////////////////////// 12. SLAU /////////////////////////////////////////////////////////////////////
 //Second Level Administrative Units
 var Slau_SA = ee.FeatureCollection("FAO/GAUL_SIMPLIFIED_500m/2015/level2").select('ADM2_NAME').filterBounds(AOI);
-Export.table.toDrive({collection: Slau_SA, description: "Slau_SA", fileFormat: 'GeoJSON', folder: 'Geodatabase'});
+Export.table.toDrive({collection: Slau_SA, description: "SLAU_SA", fileFormat: 'GeoJSON', folder: 'Geodatabase'});
