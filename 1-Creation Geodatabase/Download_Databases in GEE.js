@@ -6,10 +6,10 @@
 MOST TABLES AND DATASETS USED:
 
 1. South America Countries and Boundary 
-2. Firt Level Administrative Units (FLAU)
+2. First Level Administrative Units (FLAU)
 3. Second Level Administrative Units (SLAU)
 4. HydroSHEDS (Conditioned DEM)
-5. HydroBASINS (Level 1,2,3,4,5,6,7,8,9,10,11 and 12)
+5. HydroBASINS (Level 1 to 12)
 6. HydroRIVERS
 7. HydroLAKES
 8. Global Lakes and Wetlands Database (GLWD)
