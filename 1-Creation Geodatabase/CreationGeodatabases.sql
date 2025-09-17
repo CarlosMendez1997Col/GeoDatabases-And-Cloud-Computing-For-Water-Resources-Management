@@ -78,9 +78,19 @@ shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_FLAU.sh
 
 shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_SLAU.shp water_data.SA_SLAU > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_SLAU.sql
 
-4. HydroSHEDS (Conditioned DEM)
+4. HydroSHEDS
 
+Void DEM
 
+shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_hydroSHEDS_Void_DEM.shp water_data.SA_hydroSHEDS_Void_DEM > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroSHEDS_Void_DEM.sql
+
+Flow Direcion
+
+shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_hydroSHEDS_Flow_Direction.shp water_data.SA_hydroSHEDS_Flow_Direction > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroSHEDS_Flow_Direction.sql
+
+Flow Accumulation
+
+shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_hydroSHEDS_Flow_Accumulation.shp water_data.SA_hydroSHEDS_Flow_Accumulation > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroSHEDS_Flow_Accumulation.sql
 
 5. HydroBASINS (Level 1 to 12)
 
