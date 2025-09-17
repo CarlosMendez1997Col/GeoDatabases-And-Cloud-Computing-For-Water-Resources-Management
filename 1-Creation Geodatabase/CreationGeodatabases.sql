@@ -90,28 +90,40 @@ shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_hydroSH
 5. HydroBASINS (Level 1 to 12)
 
 Level 01
+shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\hybas_sa_lev01_v1c.shp water_data.SA_hydroBASIN_Lv01 > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroBASIN_Lv01.sql
 
 Level 02
+shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\hybas_sa_lev02_v1c.shp water_data.SA_hydroBASIN_Lv02 > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroBASIN_Lv02.sql
 
 Level 03
+shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\hybas_sa_lev03_v1c.shp water_data.SA_hydroBASIN_Lv03 > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroBASIN_Lv03.sql
 
 Level 04
+shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\hybas_sa_lev04_v1c.shp water_data.SA_hydroBASIN_Lv04 > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroBASIN_Lv04.sql
 
 Level 05
+shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\hybas_sa_lev05_v1c.shp water_data.SA_hydroBASIN_Lv05 > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroBASIN_Lv05.sql
 
 Level 06
+shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\hybas_sa_lev06_v1c.shp water_data.SA_hydroBASIN_Lv06 > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroBASIN_Lv06.sql
 
 Level 07
+shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\hybas_sa_lev07_v1c.shp water_data.SA_hydroBASIN_Lv07 > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroBASIN_Lv07.sql
 
 Level 08
+shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\hybas_sa_lev08_v1c.shp water_data.SA_hydroBASIN_Lv08 > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroBASIN_Lv08.sql
 
 Level 09
+shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\hybas_sa_lev09_v1c.shp water_data.SA_hydroBASIN_Lv09 > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroBASIN_Lv09.sql
 
 Level 10
+shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\hybas_sa_lev10_v1c.shp water_data.SA_hydroBASIN_Lv10 > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroBASIN_Lv10.sql
 
 Level 11
+shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\hybas_sa_lev11_v1c.shp water_data.SA_hydroBASIN_Lv11 > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroBASIN_Lv11.sql
 
 Level 12
+shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\hybas_sa_lev12_v1c.shp water_data.SA_hydroBASIN_Lv12 > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroBASIN_Lv12.sql
 
 6. HydroRIVERS
 
