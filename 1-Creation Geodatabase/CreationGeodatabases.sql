@@ -89,6 +89,30 @@ shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_hydroSH
 
 5. HydroBASINS (Level 1 to 12)
 
+Level 01
+
+Level 02
+
+Level 03
+
+Level 04
+
+Level 05
+
+Level 06
+
+Level 07
+
+Level 08
+
+Level 09
+
+Level 10
+
+Level 11
+
+Level 12
+
 6. HydroRIVERS
 
 7. HydroLAKES
