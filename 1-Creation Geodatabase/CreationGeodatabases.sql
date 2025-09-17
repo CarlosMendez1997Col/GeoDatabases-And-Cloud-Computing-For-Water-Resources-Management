@@ -58,7 +58,6 @@ create EXTENSION postgis;
 
 /* 
 Connect GIS data using PostGIS and import shapefiles (.shp) using the function shp2pgsql
-
 Try to run the following scripts in the Terminal of Windows/macOS/Linux:
 
 First, Open the shp2pgsql.exe in the local directory 
@@ -67,49 +66,39 @@ C:\Program Files\PostgreSQL\17\bin\shp2pgsql.exe
 Second, run the script and replace the path folder and .shp files, folowing the structure 
 (shp2pgsql -s <SRID> -I <path_to_shapefile.shp> <schema_name>.<table_name> > <output_file.sql>
 
+1. South America Countries and Boundary
 
-																				HydroSHEDS_SA.shp
+shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_Countries.shp water_data.SA_Countries > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_Countries.sql
 
+2. First Level Administrative Units (FLAU)
 
-																				HydroBASINS_SA.shp
+shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_FLAU.shp water_data.SA_FLAU > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_FLAU.sql
 
+3. Second Level Administrative Units (SLAU)
 
-																				HydroRIVERS_SA.shp
+shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_SLAU.shp water_data.SA_SLAU > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_SLAU.sql
 
-
-																				HydroLAKES_SA.shp
-
-
-																				GLWD_SA.shp
-
-
-																				HydroWASTE_SA.shp
-
-
-																				GloRiC_SA.shp
-
-
-																				LakeTEMP_SA.shp
+4. HydroSHEDS (Conditioned DEM)
 
 
 
-Example with HydroWASTE_SA.shp
+5. HydroBASINS (Level 1 to 12)
+
+6. HydroRIVERS
+
+7. HydroLAKES
+
+8. Global Lakes and Wetlands Database (GLWD)
+
+9. HydroWASTE
+
 shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabases_Water\HydroWASTE_SA.shp water_data.Hydrowaste > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\Hydrowaste.sql
 
-Example with GloRiC.shp
+10. Global River Classification (GloRiC)
 
+11. Lake TEMP
 
-Example with GloRiC.shp
-
-
-Example with GloRiC.shp
-
-
-Example with GloRiC.shp
-
-
-EXAMPLE WITH LakeTEMP.shp
-shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabases_Water\LakeTEMP_SA.shp water_data.LakeTEMP > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\LakeTEMP.sql
+12. Global Power Plant Database (GPPD)
 
 */
 
