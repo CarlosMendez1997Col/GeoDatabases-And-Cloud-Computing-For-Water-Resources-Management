@@ -78,12 +78,14 @@ shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_FLAU.sh
 
 shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_SLAU.shp water_data.SA_SLAU > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_SLAU.sql
 
-4. HydroSHEDS (Problems with import using shp2pgsql (Files > 3.0 GB ))
+4. HydroSHEDS 
 
 Void DEM
 shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_hydroSHEDS_Void_DEM.shp water_data.SA_hydroSHEDS_Void_DEM > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroSHEDS_Void_DEM.sql
+
 Flow Direcion
 shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_hydroSHEDS_Flow_Direction.shp water_data.SA_hydroSHEDS_Flow_Direction > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroSHEDS_Flow_Direction.sql
+
 Flow Accumulation
 shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_hydroSHEDS_Flow_Accumulation.shp water_data.SA_hydroSHEDS_Flow_Accumulation > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroSHEDS_Flow_Accumulation.sql
 
@@ -127,9 +129,15 @@ shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\hybas_sa_l
 
 6. HydroRIVERS
 
+shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_hydroRIVERS.shp water_data.SA_hydroRIVERS > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroRIVERS.sql
+
 7. HydroLAKES
 
+shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_hydroLAKES.shp water_data.SA_hydroLAKES > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroLAKES.sql
+
 8. Global Lakes and Wetlands Database (GLWD)
+
+shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_hydroRIVERS.shp water_data.SA_hydroRIVERS > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroRIVERS.sql
 
 9. HydroWASTE
 
@@ -137,9 +145,15 @@ shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabases_Water\HydroWASTE_SA.s
 
 10. Global River Classification (GloRiC)
 
+shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_hydroRIVERS.shp water_data.SA_hydroRIVERS > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroRIVERS.sql
+
 11. Lake TEMP
 
+shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_hydroRIVERS.shp water_data.SA_hydroRIVERS > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroRIVERS.sql
+
 12. Global Power Plant Database (GPPD)
+
+shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_hydroRIVERS.shp water_data.SA_hydroRIVERS > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroRIVERS.sql
 
 */
 
