@@ -52,9 +52,19 @@ COMMENT ON ROLE support IS 'support data';
 --- Change the administrator and set 'Support'
 ALTER DATABASE master_gdb OWNER TO support;
 
---- create the extension PostGIS 
+--- create extensions related with PostGIS
+
 create EXTENSION postgis;
 
+create EXTENSION fuzzystrmatch;
+
+create EXTENSION postgis_raster;
+
+create EXTENSION postgis_topology;
+
+create EXTENSION postgis_sfcgal;
+
+create EXTENSION postgis_tiger_geocoder;
 
 /* 
 Connect GIS data using PostGIS and import shapefiles (.shp) using the function shp2pgsql
