@@ -10,3 +10,5 @@
 2-Import-files(shp2sql)/SA_hydroBASIN_Lv11.sql
 2-Import-files(shp2sql)/SA_hydroBASIN_Lv12.sql
 2-Import-files(shp2sql)/SA_hydroLAKES.sql
+2-Import-files(shp2sql)/Hydrowaste.sql
+2-Import-files(shp2sql)/SA_LakeTEMP.sql
