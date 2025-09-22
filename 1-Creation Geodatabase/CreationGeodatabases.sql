@@ -141,7 +141,7 @@ shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_GLWD_Ma
 
 9. HydroWASTE
 
-shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_HydroWASTE.shp water_data.SA_Hydrowaste > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\Hydrowaste.sql
+shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_HydroWASTE.shp water_data.SA_Hydrowaste > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroWASTE.sql
 
 10. Global River Classification (GloRiC)
 
