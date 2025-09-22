@@ -157,12 +157,8 @@ shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_hydroRI
 
 */
 
-
-
 SELECT * FROM public.water_categories
 ORDER BY hybas_id ASC;
-
-
 
 --- Create a table with fields
 CREATE TABLE water_categories(Hybas_ID int, water_description varchar(30));
@@ -178,7 +174,6 @@ ALTER TABLE IF EXISTS public.water_categories
 --- Delete table with fields
 DROP TABLE water_categories;
 
-
 --- Insert data and rows into water_categories
 INSERT INTO water_categories(hybas_id,water_description) VALUES(123456,'Main Basin');
 INSERT INTO water_categories(hybas_id,water_description) VALUES(7890,'Basin2');
@@ -190,7 +185,6 @@ UPDATE water_categories SET water_description = 'Basin' WHERE hybas_id = 123456;
 DELETE FROM water_categories WHERE hybas_id = 123456;
 DELETE FROM water_categories WHERE hybas_id = 7890;
 
-
 CREATE SCHEMA water_data
     AUTHORIZATION postgres;
 
@@ -200,6 +194,3 @@ drop DATABASE master_gdb;
 
 --- delete user with permissions 
 drop ROLE SUPPORT;
-
-
-
