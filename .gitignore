@@ -13,3 +13,7 @@
 2-Import-files(shp2sql)/Hydrowaste.sql
 2-Import-files(shp2sql)/SA_LakeTEMP.sql
 2-Import-files(shp2sql)/SA_HydroWASTE.sql
+2-Import-files(shp2sql)/SA_Countries.sql
+2-Import-files(shp2sql)/SA_FLAU.sql
+2-Import-files(shp2sql)/SA_hydroBASIN_Lv01.sql
+2-Import-files(shp2sql)/SA_SLAU.sql
