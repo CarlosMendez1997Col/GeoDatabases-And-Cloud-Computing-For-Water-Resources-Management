@@ -182,12 +182,11 @@ SELECT SUM (elevation)
 FROM water_data.sa_hydrolakes
 WHERE country_1 = 'Brazil';
 
-SELECT *
-FROM water_data.sa_hydrolakes;
+SELECT municipali, Count(*)
+FROM water_data.sa_slau
+GROUP BY municipali;
 
-SELECT * FROM public.water_categories
-ORDER BY hybas_id ASC;
-
+/*
 --- Create a table with fields
 CREATE TABLE water_categories(Hybas_ID int, water_description varchar(30));
 
@@ -221,3 +220,5 @@ drop DATABASE master_gdb;
 
 --- delete user with permissions 
 drop ROLE SUPPORT;
+
+*/
