@@ -167,6 +167,24 @@ shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_hydroRI
 
 */
 
+-- Rename table GLWD
+ALTER TABLE IF EXISTS water_data.sa_glwd_main_class
+    RENAME TO sa_glwd;
+
+SELECT country, ST_Transform( geom, 4326)
+FROM water_data.sa_countries
+WHERE country = 'Colombia';
+
+SELECT Count(*)
+FROM water_data.sa_gloric;
+
+SELECT SUM (elevation)
+FROM water_data.sa_hydrolakes
+WHERE country_1 = 'Brazil';
+
+SELECT *
+FROM water_data.sa_hydrolakes;
+
 SELECT * FROM public.water_categories
 ORDER BY hybas_id ASC;
 
@@ -197,7 +215,6 @@ DELETE FROM water_categories WHERE hybas_id = 7890;
 
 CREATE SCHEMA water_data
     AUTHORIZATION postgres;
-
 
 --- Delete DATABASE
 drop DATABASE master_gdb;	
